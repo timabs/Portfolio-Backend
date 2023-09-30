@@ -38,6 +38,7 @@ app.post("/form", (req, res) => {
     to: user,
     subject: `Message from ${req.body.email}: ${req.body.subject}`,
     text: req.body.content,
+    replyTo: req.body.email,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
