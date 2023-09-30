@@ -31,8 +31,11 @@ app.post("/form", (req, res) => {
     },
   });
   const mailOptions = {
-    from: req.body.email,
-    to: "morseylane@gmail.com",
+    from: {
+      name: req.body.name,
+      address: user,
+    },
+    to: user,
     subject: `Message from ${req.body.email}: ${req.body.subject}`,
     text: req.body.content,
   };
