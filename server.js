@@ -40,7 +40,7 @@ app.post("/form", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.send("error");
+      res.send(error);
     } else {
       res.send("success");
     }
