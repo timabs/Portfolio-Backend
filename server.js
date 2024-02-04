@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 app.use(
   cors({
-    origin: ["https://morselane.com", "http://localhost:3000"],
+    origin: ["https://morselane.com", "http://localhost:5173"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
