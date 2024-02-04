@@ -45,8 +45,6 @@ app.post("/form", (req, res) => {
     if (error) {
       console.log(error);
       res.send(error);
-    } else {
-      res.send("success");
     }
   });
 });
