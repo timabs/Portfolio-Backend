@@ -43,8 +43,9 @@ app.post("/form", (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
       res.send(error);
+    } else {
+      res.status(200).json({ message: `Mail sent successfully` });
     }
   });
 });
