@@ -36,7 +36,7 @@ app.post("/form", (req, res) => {
       address: user,
     },
     to: user,
-    subject: `Message from ${req.body.email}: ${req.body.subject}`,
+    subject: `Message from ${req.body.email}`,
     text: req.body.content,
     replyTo: req.body.email,
   };
